@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Invoices UI</title>
+<style>
+:root { --gap: 12px; --radius: 10px; --muted: #f4f4f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system; background:#fff; color:#111; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.card { background:#fff; border:1px solid #e5e7eb; border-radius: var(--radius); padding: 16px; }
+.row { display:flex; gap: var(--gap); }
+.col { display:flex; flex-direction:column; gap: var(--gap); }
+.btn { border:1px solid #e5e7eb; background:#111; color:#fff; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn.secondary{ background:#fff; color:#111; }
+.btn[disabled]{ opacity:.6; cursor:not-allowed; }
+.input, select { border:1px solid #e5e7eb; border-radius:8px; padding:8px 10px; }
+table { width:100%; border-collapse: collapse; }
+th, td { padding:10px; border-bottom:1px solid #e5e7eb; text-align:left; }
+.skeleton { background:linear-gradient(90deg,#eee,#f7f7f7,#eee); height:14px; border-radius:8px; animation: sh 1.2s infinite; }
+@keyframes sh { 0%{background-position: -200px 0} 100%{background-position: 200px 0}}
+.banner { padding:10px; border-radius:8px; background:#fef2f2; color:#7f1d1d; border:1px solid #fecaca; }
+.status { font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; }
+.status.unpaid{ background:#fff7ed; }
+.status.paid{ background:#ecfdf5; }
+.status.draft{ background:#f1f5f9; }
+.preview { background: var(--muted); border-radius: var(--radius); padding: 16px; border:1px dashed #e5e7eb; }
+.space-between{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
