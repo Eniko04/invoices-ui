@@ -1,19 +1,15 @@
-<script setup lang="ts">
-import Toasts from './components/Toasts.vue'
-</script>
-
 <template>
-  <div class="container">
-    <router-view />
-    <Toasts />
-  </div>
+  <router-view />
 </template>
 
+<script setup lang="ts">
+</script>
+
 <style>
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
-  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
 }
 </style>
